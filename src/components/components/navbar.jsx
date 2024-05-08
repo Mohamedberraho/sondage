@@ -13,7 +13,7 @@ function Nav() {
 
         <div className="flex gap-5 self-start mt-1 text-2xl text-center max-md:flex-wrap max-md:max-w-full">
         <a href="/" className="underline text-current">Acceuil</a>
-        <a href="/creer-sondage" className="underline text-current">Creer Sondage</a>
+        <a href="/createSondage" className="underline text-current">Creer Sondage</a>
         <a href="/les-sondages" className="underline text-current">Les Sondages</a>
         <a href="/contact" className="underline text-current">Contact</a>
 
