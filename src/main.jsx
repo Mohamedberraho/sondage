@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './components/HomePage.jsx';
 import CreateSurvey from "./components/CreateSurvey.jsx"
+import Survey from './components/Survey.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path:"/createSondage",
     element:<CreateSurvey/>,
+  },
+  {
+    path:"/sondages",
+    element:<Survey/>
   }
 ]);
 
