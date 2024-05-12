@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import QuestionComponent from "./questionComponent";
-import Titledesc from '../titledesc';
+
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { collection } from 'firebase/firestore';
 import { db } from '../../fireBase/fireBase';
@@ -35,7 +35,6 @@ function Sondage({ titre, description }) {
         <div className="flex gap-5 items-center ml-10 max-w-full w-[642px] max-md:flex-wrap">
           <div className="flex-auto self-stretch my-auto">
             {titre}
-
           </div>
           <div className="shrink-0 self-stretch w-px bg-white border border-black border-solid h-[113px]" />
           <div className="flex-auto self-stretch my-auto">

@@ -40,7 +40,6 @@ function QuestionComponent({ questions, choix }) {
             <div className="flex flex-col items-center mt-3 gap-4">
                 {/* Display the question at the top */}
                 <h3 className="text-lg font-bold mb-4">{questions}</h3>
-
                 {choix.map((choix, index) => {
                     // Calculate the percentage of clicks for each choice
                     const percentage = totalClicks > 0 ? (clickCounts[index] / totalClicks) * 100 : 0;
