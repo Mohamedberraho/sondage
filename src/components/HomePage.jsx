@@ -53,7 +53,7 @@ function Home() {
           </div>
           <div className="flex flex-col ml-5 w-[43%] max-md:ml-0 max-md:w-full">
             <div className="py-28">
-              <button className="justify-center items-center self-stretch px-16 py-10 my-auto w-full text-2xl font-bold text-center text-black underline bg-white rounded-[50px] max-md:px-5 max-md:mt-10 max-md:max-w-full">Creer un Sondage</button>
+              <button className="justify-center items-center self-stretch px-16 py-10 my-auto w-full text-2xl font-bold text-center text-black underline bg-white rounded-[50px] max-md:px-5 max-md:mt-10 max-md:max-w-full"><a href="/createSondage" className="underline text-current">Creer un Sondage</a></button>
             </div>
           </div>
         </div>

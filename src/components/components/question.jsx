@@ -1,36 +1,41 @@
-import React from 'react'
-import "../../index.css";
+import React from 'react';
 
-function Question() {
-  return (
-    <>
-    <div className="bg-black flex justify-center align-center items-center mx-auto">
-    <div className="w-full max-w-md px-4">
-    <input
-        type="text"
-        placeholder="Question 1"
-        className="justify-center items-center px-10 py-2 bg-white rounded-[50px] w-[500px] max-md:px-5 max-md:max-w-full" 
-    />
+function Question({ question, choix, handleQuestionChange, handleChoiceChange, ajouterChoix }) {
+    return (
+        <div className="flex flex-col w-full p-4 bg-gray-200 rounded-[50px] mt-4">
+            {/* Input for the question */}
+            <input
+                type="text"
+                placeholder="Question"
+                value={question}
+                onChange={(e) => handleQuestionChange(e.target.value)}
+                className="px-4 py-2 mb-4 text-2xl bg-white rounded-md w-full"
+                required
+            />
 
-    <div className="flex flex-col space-y-4 items-start mt-5 w-full text-2xl font-bold text-center max-w-[1030px] max-md:flex-wrap max-md:max-w-full">
-        <input
-            type="text"
-            placeholder="Choix 1"
-            className=" px-16 py-2 bg-white rounded-[50px] w-3/3 max-md:px-5" 
-        />
+            {/* Loop through the choices and render inputs for each */}
+            {choix.map((choice, index) => (
+                <div key={index} className="mb-2">
+                    <input
+                        type="text"
+                        placeholder={`Choice ${index + 1}`}
+                        value={choice}
+                        onChange={(e) => handleChoiceChange(index, e.target.value)}
+                        className="px-4 py-2 bg-white rounded-md w-full"
+                        required
+                    />
+                </div>
+            ))}
 
-        <input
-            type="text"
-            placeholder="Choix 2"
-            className=" px-16 py-2 bg-white rounded-[50px] w-3/3 max-md:px-5" 
-        />
-        <button className="items-center align-center justify-center px-16 bg-white rounded-[50px] max-md:px-5">Ajouter Choix</button>
-    </div>
-    </div>
-</div>
-
-    </>
-  )
+            {/* Button to add a new choice */}
+            <button
+                onClick={ajouterChoix}
+                className="px-4 py-2 mt-2 bg-black text-white rounded-md"
+            >
+                Ajouter choix
+            </button>
+        </div>
+    );
 }
 
-export default Question
+export default Question;
